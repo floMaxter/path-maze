@@ -1,0 +1,100 @@
+\hypertarget{_maze_8cpp}{}\doxysection{D\+:/\+Course Work/\+My\+Project/\+Maze.cpp File Reference}
+\label{_maze_8cpp}\index{D:/Course Work/MyProject/Maze.cpp@{D:/Course Work/MyProject/Maze.cpp}}
+{\ttfamily \#include \char`\"{}Maze.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_maze_8cpp_aac02c849e2c15ea8cc98450f6399e645}{Max\+Length}}~100000000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_maze_8cpp_a510aa3ea3df94e1c665f0b8f264bc223}{Input\+Maze}} (ifstream \&fin, \mbox{\hyperlink{class_maze}{Maze}} \&mz)
+\item 
+void \mbox{\hyperlink{_maze_8cpp_a234c34147c16656c2f29ccf133a44062}{Find\+Coord}} (\mbox{\hyperlink{class_maze}{Maze}} \&mz)
+\item 
+bool \mbox{\hyperlink{_maze_8cpp_aa857267fed19870016432dad99c9cca0}{Finding\+Way}} (\mbox{\hyperlink{class_maze}{Maze}} \&mz, int xs, int ys, int count, ofstream \&fout)
+\begin{DoxyCompactList}\small\item\em Finding for a path from start to finish. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_maze_8cpp_adad172fb7083f778c1412ce8063c2f74}{Checking\+Out}} (\mbox{\hyperlink{class_maze}{Maze}} \&mz, int x, int y)
+\item 
+void \mbox{\hyperlink{_maze_8cpp_a64b0b563dba2a4dcb1ae3e39dc4d5d3b}{Output\+Maze}} (ofstream \&fout, \mbox{\hyperlink{class_maze}{Maze}} \&mz, int k)
+\item 
+void \mbox{\hyperlink{_maze_8cpp_a52a50df2d91423a32854bef892132c60}{Short\+Cut\+Recording}} (\mbox{\hyperlink{class_maze}{Maze}} \&mz, int k)
+\item 
+void \mbox{\hyperlink{_maze_8cpp_a4e46a011151ce6df31c70a9589702251}{Print\+File}} (ifstream \&fin)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_maze_8cpp_aac02c849e2c15ea8cc98450f6399e645}\label{_maze_8cpp_aac02c849e2c15ea8cc98450f6399e645}} 
+\index{Maze.cpp@{Maze.cpp}!MaxLength@{MaxLength}}
+\index{MaxLength@{MaxLength}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{MaxLength}{MaxLength}}
+{\footnotesize\ttfamily \#define Max\+Length~100000000}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_maze_8cpp_adad172fb7083f778c1412ce8063c2f74}\label{_maze_8cpp_adad172fb7083f778c1412ce8063c2f74}} 
+\index{Maze.cpp@{Maze.cpp}!CheckingOut@{CheckingOut}}
+\index{CheckingOut@{CheckingOut}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckingOut()}{CheckingOut()}}
+{\footnotesize\ttfamily bool Checking\+Out (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_maze_8cpp_a234c34147c16656c2f29ccf133a44062}\label{_maze_8cpp_a234c34147c16656c2f29ccf133a44062}} 
+\index{Maze.cpp@{Maze.cpp}!FindCoord@{FindCoord}}
+\index{FindCoord@{FindCoord}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{FindCoord()}{FindCoord()}}
+{\footnotesize\ttfamily void Find\+Coord (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_maze_8cpp_aa857267fed19870016432dad99c9cca0}\label{_maze_8cpp_aa857267fed19870016432dad99c9cca0}} 
+\index{Maze.cpp@{Maze.cpp}!FindingWay@{FindingWay}}
+\index{FindingWay@{FindingWay}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{FindingWay()}{FindingWay()}}
+{\footnotesize\ttfamily bool Finding\+Way (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz,  }\item[{int}]{xs,  }\item[{int}]{ys,  }\item[{int}]{count,  }\item[{ofstream \&}]{fout }\end{DoxyParamCaption})}
+
+
+
+Finding for a path from start to finish. 
+
+This function is basic, it includes a pathfinding algorithm in a maze. The input receives the coordinates of a point and an object of the \mbox{\hyperlink{class_maze}{Maze}} class, as well as an output stream to a file. A boolean variable is returned from the function, indicating whether the exit was found or not.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mz} & object of class \mbox{\hyperlink{class_maze}{Maze}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em xs} & x coordinate to start \\
+\hline
+\mbox{\texttt{ in}}  & {\em ys} & s coordinate to start \\
+\hline
+\mbox{\texttt{ in}}  & {\em count} & step counter \\
+\hline
+\mbox{\texttt{ in}}  & {\em fout} & output stream to file \\
+\hline
+\mbox{\texttt{ out}}  & {\em res} & found a way or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_maze_8cpp_a510aa3ea3df94e1c665f0b8f264bc223}\label{_maze_8cpp_a510aa3ea3df94e1c665f0b8f264bc223}} 
+\index{Maze.cpp@{Maze.cpp}!InputMaze@{InputMaze}}
+\index{InputMaze@{InputMaze}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{InputMaze()}{InputMaze()}}
+{\footnotesize\ttfamily void Input\+Maze (\begin{DoxyParamCaption}\item[{ifstream \&}]{fin,  }\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_maze_8cpp_a64b0b563dba2a4dcb1ae3e39dc4d5d3b}\label{_maze_8cpp_a64b0b563dba2a4dcb1ae3e39dc4d5d3b}} 
+\index{Maze.cpp@{Maze.cpp}!OutputMaze@{OutputMaze}}
+\index{OutputMaze@{OutputMaze}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{OutputMaze()}{OutputMaze()}}
+{\footnotesize\ttfamily void Output\+Maze (\begin{DoxyParamCaption}\item[{ofstream \&}]{fout,  }\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_maze_8cpp_a4e46a011151ce6df31c70a9589702251}\label{_maze_8cpp_a4e46a011151ce6df31c70a9589702251}} 
+\index{Maze.cpp@{Maze.cpp}!PrintFile@{PrintFile}}
+\index{PrintFile@{PrintFile}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{PrintFile()}{PrintFile()}}
+{\footnotesize\ttfamily void Print\+File (\begin{DoxyParamCaption}\item[{ifstream \&}]{fin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_maze_8cpp_a52a50df2d91423a32854bef892132c60}\label{_maze_8cpp_a52a50df2d91423a32854bef892132c60}} 
+\index{Maze.cpp@{Maze.cpp}!ShortCutRecording@{ShortCutRecording}}
+\index{ShortCutRecording@{ShortCutRecording}!Maze.cpp@{Maze.cpp}}
+\doxysubsubsection{\texorpdfstring{ShortCutRecording()}{ShortCutRecording()}}
+{\footnotesize\ttfamily void Short\+Cut\+Recording (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_maze}{Maze}} \&}]{mz,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
